@@ -111,6 +111,11 @@
       <DeploymentContent>true</DeploymentContent>
     </None>
     <None Include="Order1.txt" />
+    <None Include="Order10.txt" />
+    <None Include="Order11.txt" />
+    <None Include="Order2.txt" />
+    <None Include="Order4.txt" />
+    <None Include="Order5.txt" />
     <None Include="Order_Small.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

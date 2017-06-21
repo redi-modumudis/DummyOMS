@@ -163,5 +163,10 @@
     <None Include="notes.txt">
       <Filter>miscellaneous</Filter>
     </None>
+    <None Include="Order10.txt" />
+    <None Include="Order5.txt" />
+    <None Include="Order11.txt" />
+    <None Include="Order2.txt" />
+    <None Include="Order4.txt" />
   </ItemGroup>
 </Project>
