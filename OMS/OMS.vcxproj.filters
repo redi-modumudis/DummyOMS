@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Business">
+      <UniqueIdentifier>{95d67ea1-62aa-408f-9498-1cdc5d491c61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presenter">
+      <UniqueIdentifier>{c06237de-ac77-4640-9e62-a51589efa28d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Business\Header Files">
+      <UniqueIdentifier>{57a4d14b-6ee5-4c34-b1e9-2f02099265d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Business\Source Files">
+      <UniqueIdentifier>{a98dbe9b-961c-4aaa-9dbd-f59ea63cdd21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{8aef56d4-d99f-45cc-9b4d-2c652a65f89c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\HeaderFile">
+      <UniqueIdentifier>{0b56bd00-44fa-45a4-bdca-be59e70d65fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\SourceFile">
+      <UniqueIdentifier>{74cf27b4-7bd7-4101-b21d-e7934ab48a79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presenter\HeaderFile">
+      <UniqueIdentifier>{a748b707-ac55-456c-86ba-742656d1d641}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presenter\SourceFile">
+      <UniqueIdentifier>{adbfd856-a5cb-454f-aa69-79a741044bee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="miscellaneous">
+      <UniqueIdentifier>{1af76819-6c19-4bfd-8625-d6ef42f01b2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infra">
+      <UniqueIdentifier>{ecf68ed6-9a42-4a56-bddb-a4d09a5db15d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infra\Header Files">
+      <UniqueIdentifier>{4dc9c5cc-e7bf-4b39-9636-706bc771ef0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infra\Source Files">
+      <UniqueIdentifier>{2ef6972d-c913-4b71-8fa5-3106bb71b1f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infra\Data">
+      <UniqueIdentifier>{9db07d73-3c49-4cc9-96ca-a6b104930699}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infra\Data\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Infra\Data\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="OMSMain">
+      <UniqueIdentifier>{e5eab14e-227f-4760-a5cb-69fccc3af101}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{fc631910-98fe-4d1f-8bb2-f0d384a85d99}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="tr_error.h">
+      <Filter>Utils\HeaderFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Provider.h">
+      <Filter>Infra\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProviderDef.h">
+      <Filter>Infra\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IOrderValidator.h">
+      <Filter>Business\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OrderFactory.h">
+      <Filter>Infra\Data\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tr_util.h">
+      <Filter>Utils\HeaderFile</Filter>
+    </ClInclude>
+    <ClInclude Include="DummyStockExchange.h">
+      <Filter>Business\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IStockExchange.h">
+      <Filter>Business\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StockExchange.h">
+      <Filter>Business\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OrderQuantityValidator.h">
+      <Filter>Business\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OrderValidator.h">
+      <Filter>Business\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OrderProvider.h">
+      <Filter>Infra\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Order.h">
+      <Filter>Infra\Data\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cmd.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Presenter.h">
+      <Filter>Presenter\HeaderFile</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="tr_error.cpp">
+      <Filter>Utils\SourceFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Provider.cpp">
+      <Filter>Infra\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OMSMain.cpp">
+      <Filter>OMSMain</Filter>
+    </ClCompile>
+    <ClCompile Include="OrderFactory.cpp">
+      <Filter>Infra\Data\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StockExchange.cpp">
+      <Filter>Business\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DummyStockExchange.cpp">
+      <Filter>Business\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OrderQuantityValidator.cpp">
+      <Filter>Business\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OrderValidator.cpp">
+      <Filter>Business\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OrderProvider.cpp">
+      <Filter>Infra\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IOrderProvider.h">
+      <Filter>Infra\Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Order.cpp">
+      <Filter>Infra\Data\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cmd.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Presenter.cpp">
+      <Filter>Presenter\SourceFile</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Order1.txt">
+      <Filter>miscellaneous</Filter>
+    </None>
+    <None Include="OMS.cd">
+      <Filter>miscellaneous</Filter>
+    </None>
+    <None Include="Order_Small.txt">
+      <Filter>miscellaneous</Filter>
+    </None>
+    <None Include="notes.txt">
+      <Filter>miscellaneous</Filter>
+    </None>
+  </ItemGroup>
+</Project>

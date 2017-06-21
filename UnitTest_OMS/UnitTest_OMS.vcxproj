@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{30BB1ABF-EA11-4414-AC88-70216C526DEB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>UnitTest_OMS</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\TR\work\On board Assignment\OMS\OMS;C:\TR\work\On board Assignment\googletest;C:\TR\work\On board Assignment\googletest\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\TR\work\On board Assignment\OMS\OMS;C:\TR\work\On board Assignment\googletest;C:\TR\work\On board Assignment\googletest\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\TR\work\On board Assignment\OMS\OMS;C:\TR\work\On board Assignment\googletest\include;C:\TR\work\On board Assignment\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>C:\TR\work\On board Assignment\OMS\OMS\Debug\Order.obj;C:\TR\work\On board Assignment\OMS\OMS\Debug\Presenter.obj;C:\TR\work\On board Assignment\OMS\OMS\Debug\DummyStockExchange.obj;C:\TR\work\On board Assignment\OMS\OMS\Debug\OrderFactory.obj;C:\TR\work\On board Assignment\OMS\OMS\Debug\OrderProvider.obj;C:\TR\work\On board Assignment\OMS\OMS\Debug\\tr_error.obj;C:\TR\work\On board Assignment\OMS\OMS\Debug\\StockExchange.obj;C:\TR\work\On board Assignment\OMS\OMS\Debug\\OrderValidator.obj;C:\TR\work\On board Assignment\OMS\OMS\Debug\\OrderQuantityValidator.obj;C:\TR\work\On board Assignment\OMS\OMS\Debug\\Cmd.obj;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="OrderValidator.cpp" />
+    <ClCompile Include="UT_Cmd.cpp" />
+    <ClCompile Include="UT_OrderQuantityValidator.cpp" />
+    <ClCompile Include="UT_Provider.cpp" />
+    <ClCompile Include="UT_tr_error.cpp" />
+    <ClCompile Include="UT_Presenter.cpp" />
+    <ClCompile Include="UT_DummyStockExchange.cpp" />
+    <ClCompile Include="UT_Main.cpp" />
+    <ClCompile Include="UT_Order.cpp" />
+    <ClCompile Include="UT_OrderFactory.cpp" />
+    <ClCompile Include="UT_OrderProvider.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GoogleTest\GoogleTest.vcxproj">
+      <Project>{4d300ef3-9638-4900-9147-cd4a0e110bf4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\OMS\OMS.vcxproj">
+      <Project>{46d27966-e080-49b9-b923-3e4229b0874b}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
