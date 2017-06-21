@@ -44,23 +44,23 @@ void Presenter::ShowCmdOptions()
 	gotoXY(0,0);
 	PrintCommandLineOptions();
 	
-	char command='9';
+	char command=MAIN_MENU;
 	do{
 		command=_getch();
 		cout<<command<<endl;
 		switch(command)
 		{
-			case '1':
+			case LOAD_FILEORDERS:
 			{
 				command=LoadOrders();
 				break;
 			}
-			case '2':
+			case SAVE_FILEORDERS:
 			{
 				command=SaveOrders();
 				break;
 			}
-			case '9':
+			case MAIN_MENU:
 			{
 				ClearConsole();	
 				gotoXY(0,0);
@@ -74,7 +74,7 @@ void Presenter::ShowCmdOptions()
 			}
 		}
 	}
-	while(command !='0');
+	while(command !=EXIT_APPL);
 
 			
 
@@ -84,7 +84,7 @@ void Presenter::ShowCmdOptions()
 }
 char Presenter::SaveOrders()
 {
-	char retValue = '0';
+	char retValue = EXIT_APPL;
 	std::string fileName;
 	cout<<"Please enter the file name"<<endl;
 	std::getline(std::cin,fileName);
@@ -97,17 +97,17 @@ char Presenter::SaveOrders()
 		if (GetAsyncKeyState(VK_ESCAPE))
 		{
 			mainMenu = true;
-			retValue='0';
+			retValue=EXIT_APPL;
 		}
 		else if (GetAsyncKeyState(0x39))
 		{
 			mainMenu = true;
-			retValue='9';				
+			retValue=MAIN_MENU;				
 		}
 		else if(orderProvider->error->getNo()> 1)
 		{
 			ShowError(orderProvider->error->getNo(), orderProvider->error->getMsg());
-			retValue='9';
+			retValue=MAIN_MENU;
 		}
 	}
 	return retValue;
@@ -122,7 +122,7 @@ char Presenter::LoadOrders()
 	cout<<"Please enter the file name"<<endl;
 	std::getline(std::cin,fileName);
 	
-	char retValue='0';
+	char retValue=EXIT_APPL;
 	LoadOrdersFromFile(fileName);
 	if(error->getNo()==TR_ERROR_SUCCESS){
 		ClearConsole();	
@@ -131,12 +131,12 @@ char Presenter::LoadOrders()
 			if (GetAsyncKeyState(VK_ESCAPE))
 			{
 				exitOption = true;
-				retValue='0';
+				retValue=EXIT_APPL;
 			}
 			else if (GetAsyncKeyState(0x39))
 			{
 				exitOption = true;
-				retValue='9';				
+				retValue=MAIN_MENU;				
 			}
 		
 			gotoXY(0,0);
@@ -148,7 +148,7 @@ char Presenter::LoadOrders()
 	else
 	{
 		ShowError(error->getNo(),error->getMsg());
-		retValue=9;
+		retValue=MAIN_MENU;
 		cout<<"\nPlease enter the command:";
 		
 	}

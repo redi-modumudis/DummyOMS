@@ -19,8 +19,17 @@ void Provider<Item>::Add(Item *item)
 template<class Item>
 void Provider<Item>::ClearItems()
 {
-	if (!Items->empty())
+	if (!Items->empty())//delete the memory of list item
+			for(auto itr=Items->begin();itr!=Items->end();++itr) {
+				Item *item=*itr;
+				delete item;
+				item=nullptr;
+			}
 		Items->clear();
+		delete Items;
+		Items=nullptr;
+
+		
 }
 
 template<class Item>
@@ -44,18 +53,7 @@ Provider<Item>::Provider()
 template<class Item>
 Provider<Item>::~Provider()
 {
-	if(Items!= nullptr){
-		if (!Items->empty())
-		{
-			
-			for(auto itr=Items->begin();itr!=Items->end();++itr) {
-				Item *item=*itr;
-				delete item;
-			}
-			Items->clear();
-		}
-
-		delete Items;
+		ClearItems();
 	}
 }
 #endif

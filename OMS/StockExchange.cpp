@@ -24,5 +24,5 @@ IStockExchange* StockExchange::getExchange(ExchangeType exchange)
 		//to do
 	}
 
-	return NULL;
+	return nullptr;
 }

@@ -86,9 +86,8 @@ OrderFactory::OrderFactory()
 
 OrderFactory::~OrderFactory()
 {
-	if(error)
-	{
-		delete error;
-		error=NULL;
-	}
+	
+	delete error;
+	error=NULL;
+	
 }

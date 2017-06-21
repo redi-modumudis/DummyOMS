@@ -52,11 +52,11 @@ DummyStockExchange::DummyStockExchange()
 
 DummyStockExchange::~DummyStockExchange()
 {
-	if(error)
-	{
-		delete error;
-		error=NULL;
-	}
+
+
+	delete error;
+	error=NULL;
+
 }
 
 

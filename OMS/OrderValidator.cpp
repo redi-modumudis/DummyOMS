@@ -7,7 +7,6 @@ int OrderValidator::Validate(const Order& order)
 
 	//validation1
 	status=OrderQuantityValidator::Validate(order);
-	if(status!=TR_ORDER_VALID) return status;
 	//validation2
 	//validation3
 	//validation4 .....so on
@@ -21,10 +20,10 @@ OrderValidator::OrderValidator()
 
 OrderValidator::~OrderValidator()
 {
-	if(error)
-	{
-		delete error;
-		error=nullptr;
-	}
+	
+	
+	delete error;
+	error=nullptr;
+	
 }
 

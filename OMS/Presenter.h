@@ -12,6 +12,10 @@
 
 using namespace std;
 
+#define MAIN_MENU '9'
+#define EXIT_APPL '0'
+#define LOAD_FILEORDERS '1'
+#define SAVE_FILEORDERS '2'
 class Presenter: public Cmd
 {
 public:

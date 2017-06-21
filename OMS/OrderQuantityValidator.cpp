@@ -14,11 +14,11 @@ int OrderQuantityValidator::Validate(const Order& order)
 
 OrderQuantityValidator::~OrderQuantityValidator()
 {
-	if(error)
-	{
-		delete error;
-		error=NULL;
-	}
+	
+	
+	delete error;
+	error=NULL;
+	
 }
 
 OrderQuantityValidator::OrderQuantityValidator()

@@ -20,11 +20,11 @@ void OrderProvider::LoadOrders(string fileName)
 		}
 		//else ignore it
     }
-	if(Orders!=nullptr)//do not delete the internal object, since its shallow copied in the above code
-	{
-		delete Orders;
-		Orders=nullptr;
-	}
+	
+	
+	delete Orders;
+	Orders=nullptr;
+	
 }
 
 void OrderProvider::SaveOrders(string fileName)
@@ -47,9 +47,9 @@ OrderProvider::OrderProvider(): StockExchange()
 
 OrderProvider::~OrderProvider()
 {
-	if(error)
-	{
-		delete error;
-		error=NULL;
-	}
+	
+	
+	delete error;
+	error=nullptr;
+	
 }

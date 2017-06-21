@@ -17,15 +17,6 @@
     <Filter Include="Business\Source Files">
       <UniqueIdentifier>{a98dbe9b-961c-4aaa-9dbd-f59ea63cdd21}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Utils">
-      <UniqueIdentifier>{8aef56d4-d99f-45cc-9b4d-2c652a65f89c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Utils\HeaderFile">
-      <UniqueIdentifier>{0b56bd00-44fa-45a4-bdca-be59e70d65fd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Utils\SourceFile">
-      <UniqueIdentifier>{74cf27b4-7bd7-4101-b21d-e7934ab48a79}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Presenter\HeaderFile">
       <UniqueIdentifier>{a748b707-ac55-456c-86ba-742656d1d641}</UniqueIdentifier>
     </Filter>
@@ -61,10 +52,19 @@
     <Filter Include="UI">
       <UniqueIdentifier>{fc631910-98fe-4d1f-8bb2-f0d384a85d99}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Infra\Utils">
+      <UniqueIdentifier>{8aef56d4-d99f-45cc-9b4d-2c652a65f89c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infra\Utils\HeaderFile">
+      <UniqueIdentifier>{0b56bd00-44fa-45a4-bdca-be59e70d65fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Infra\Utils\SourceFile">
+      <UniqueIdentifier>{74cf27b4-7bd7-4101-b21d-e7934ab48a79}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tr_error.h">
-      <Filter>Utils\HeaderFile</Filter>
+      <Filter>Infra\Utils\HeaderFile</Filter>
     </ClInclude>
     <ClInclude Include="Provider.h">
       <Filter>Infra\Header Files</Filter>
@@ -79,7 +79,7 @@
       <Filter>Infra\Data\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="tr_util.h">
-      <Filter>Utils\HeaderFile</Filter>
+      <Filter>Infra\Utils\HeaderFile</Filter>
     </ClInclude>
     <ClInclude Include="DummyStockExchange.h">
       <Filter>Business\Header Files</Filter>
@@ -96,9 +96,6 @@
     <ClInclude Include="OrderValidator.h">
       <Filter>Business\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="OrderProvider.h">
-      <Filter>Infra\Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Order.h">
       <Filter>Infra\Data\Header Files</Filter>
     </ClInclude>
@@ -108,10 +105,13 @@
     <ClInclude Include="Presenter.h">
       <Filter>Presenter\HeaderFile</Filter>
     </ClInclude>
+    <ClInclude Include="OrderProvider.h">
+      <Filter>Business\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="tr_error.cpp">
-      <Filter>Utils\SourceFile</Filter>
+      <Filter>Infra\Utils\SourceFile</Filter>
     </ClCompile>
     <ClCompile Include="Provider.cpp">
       <Filter>Infra\Source Files</Filter>
@@ -134,12 +134,6 @@
     <ClCompile Include="OrderValidator.cpp">
       <Filter>Business\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OrderProvider.cpp">
-      <Filter>Infra\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="IOrderProvider.h">
-      <Filter>Infra\Header Files</Filter>
-    </ClCompile>
     <ClCompile Include="Order.cpp">
       <Filter>Infra\Data\Source Files</Filter>
     </ClCompile>
@@ -148,6 +142,12 @@
     </ClCompile>
     <ClCompile Include="Presenter.cpp">
       <Filter>Presenter\SourceFile</Filter>
+    </ClCompile>
+    <ClCompile Include="OrderProvider.cpp">
+      <Filter>Business\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IOrderProvider.h">
+      <Filter>Business\Header Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -168,5 +168,6 @@
     <None Include="Order11.txt" />
     <None Include="Order2.txt" />
     <None Include="Order4.txt" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
 </Project>
